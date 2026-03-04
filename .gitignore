@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+dist/
+.env
+
+# Local state/cache
+.DS_Store
+.npm
+.vite
+.next
+
+# Project specific
+htfl_data.xlsx
+htfl_data_with_terms.xlsx
+htfl_data_clean.xlsx
+terminology_varying_*.xlsx
+terminology_varying_*.png
+
+# Python/Notebook
+__pycache__/
+.ipynb_checkpoints
+*.py[cod]
+*$py.class

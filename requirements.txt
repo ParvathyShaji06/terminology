@@ -1,0 +1,6 @@
+# Python Requirements (for Jupyter Notebooks)
+pandas
+openpyxl
+
+# Note: Dashboard dependencies are managed via dashboard/package.json
+# To install dashboard requirements, run 'npm install' inside the dashboard folder.

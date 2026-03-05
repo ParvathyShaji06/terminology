@@ -35,13 +35,12 @@ import {
   Cell
 } from 'recharts';
 
-const DEFAULT_API_KEY = "v1.CmMKHHN0YXRpY2tleS1lMDBwNGQwMGh0bnJqNzNoYmoSIXNlcnZpY2VhY2NvdW50LWUwMHk3OGVyOHduMzAwNGgxMTIMCJi8oskGEP3w3JoBOgsImL-6lAcQwNHhI0ACWgNlMDA.AAAAAAAAAAEJ7nTUTVdmJMmETh87kTvx2DfUm-5ajVh6WKbFQrgpvVUFGOKClqkg2r46AWvvQGQGi630cd9BR1olXWpt7g4E";
 const FILE_ID = "1TF2LJiUB_Db2Srb-PF-oM1tWwLzN0T6P";
 const DOWNLOAD_URL = `https://docs.google.com/spreadsheets/d/${FILE_ID}/export?format=xlsx`;
 
 export default function App() {
   // Section 1: Configuration & Dataset (Persistent)
-  const [apiKey, setApiKey] = useState(() => localStorage.getItem('terminology_api_key') || DEFAULT_API_KEY);
+  const [apiKey, setApiKey] = useState(() => localStorage.getItem('terminology_api_key') || "");
   const [fileName, setFileName] = useState(() => localStorage.getItem('terminology_file_name') || "");
   const [data, setData] = useState([]);
 
@@ -370,7 +369,7 @@ export default function App() {
             </h3>
             <div className="input-group">
               <label>API Key</label>
-              <input type="text" className="input-field" value={apiKey} onChange={e => setApiKey(e.target.value)} />
+              <input type="password" className="input-field" value={apiKey} onChange={e => setApiKey(e.target.value)} placeholder="Enter your Nebius API Key" />
             </div>
             <div className="input-group">
               <label>Data Source</label>
